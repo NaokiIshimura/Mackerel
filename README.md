@@ -42,5 +42,4 @@ $ sudo journalctl -u mackerel-agent.service
 
 ```
 $ sudo vi /etc/mackerel-agent/mackerel-agent.conf
-``
-`
+```
