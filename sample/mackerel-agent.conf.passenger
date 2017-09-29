@@ -1,0 +1,28 @@
+apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# check-log
+[plugin.checks.log_messages]
+command = '''check-log --file /var/log/messages --pattern 'warning|error|emerg|alert|critical' --return'''
+
+[plugin.checks.log_rails_error]
+command = "check-log --file /var/www/myapp/code/log/development.log --pattern ERROR"
+
+[plugin.checks.log_rails_fatal]
+command = "check-log --file /var/www/myapp/code/log/development.log --pattern FATAL"
+
+# check-procs
+[plugin.checks.proc_cron]
+command = "check-procs -p crond"
+
+[plugin.checks.proc_nginx_master]
+command = "check-procs -p nginx: master process -u root"
+
+[plugin.checks.proc_nginx_worker]
+command = "check-procs -p 'nginx: worker process' -W 1 -w 1 -C 1 -c 1 -u nginx"
+
+[plugin.checks.proc_passenger]
+command = "check-procs -p 'Passenger watchdog|core|ust-router' -W 3 -w 3 -C 3 -c 3"
+
+[plugin.checks.proc_rails]
+command = "check-procs -p 'Passenger RubyApp: /var/www/myapp/code/public \\(development\\)'"
+
