@@ -13,6 +13,9 @@
 - [プロセス監視をおこなう \- Mackerel ヘルプ](https://mackerel.io/ja/docs/entry/howto/check/process)
 - [ログ監視をおこなう \- Mackerel ヘルプ](https://mackerel.io/ja/docs/entry/howto/check/log)
 
+# Qiita
+- [mackerelでRailsのログを監視する \- Qiita](https://qiita.com/NaokiIshimura/items/32132e8f133d6bdc6eaf)
+
 ---
 
 # コマンド
